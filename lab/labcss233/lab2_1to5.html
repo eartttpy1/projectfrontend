@@ -1,0 +1,267 @@
+<!--1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        button{
+            font-size: 50px;
+            color: aliceblue;
+            background-color: blue;
+            border-radius: 50px;
+            border: blue;
+            padding: 50px 100px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover{
+            font-size: 100px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 50px;
+            border: none;
+            color: aliceblue;
+            padding: 100px 200px;
+        }
+    </style>
+</head>
+<body>
+    <button>Hover</button>
+    
+</body>
+</html>
+
+<!--2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+
+        }
+        .box {
+            background-color: palevioletred;
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            animation: bounceX 1s infinite alternate ease-in-out;
+        }
+
+        .big_box {
+            display: flex;
+            border: 5px dashed grey;
+            width: 500px;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Animation Keyframes */
+        @keyframes bounceX {
+            0% {
+                transform: translateX(-275px);
+            }
+            100% {
+                transform: translateX(275px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="big_box">
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>
+
+<!--3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spinner</title>
+  <style>
+    .load {
+      border-radius: 50%;
+      height: 50px;
+      width: 50px;
+      border: 5px solid rgb(173, 173, 173);
+      border-left-color: #09f;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+    <div class="load"></div>
+</body>
+</html>
+
+<!--4-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spinner</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .card {
+            position: relative;
+            height: 350px;
+            width: 300px;
+            perspective: 1000px;
+        }
+        .card_inner {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .card:hover .card_inner {
+            transform: rotateY(-180deg);
+        }
+        .card_front, .card_back {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card_front {
+            background-color: rgb(221, 126, 185);
+        }
+
+        .card_back {
+            background-color: rgb(0, 0, 0);
+            transform: rotateY(180deg);
+        }
+        
+        .card h2 {
+            font-size: 70px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card_inner">
+            <div class="card_front">
+                <h2>Front</h2>
+            </div>
+            <div class="card_back">
+                <h2>Back</h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!--5-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spinner</title>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        }
+
+        .image-container {
+            position: relative;
+            width: 500px; 
+            overflow: hidden; 
+            border-radius: 10%;
+        }
+
+        .cat {
+            display: block;
+            width: 100%; 
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.8), 
+            rgba(0, 0, 0, 0)   
+            );
+            color: aliceblue;
+            font-size: 25px;
+            font-family: sans-serif;
+            padding: 15px;
+            text-align: center;
+            transform: translateY(100%); 
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-container:hover .overlay {
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img class="cat" src="https://i.pinimg.com/736x/bc/8e/af/bc8eaf73e3c0b34be8bfe954688a143b.jpg" width="500px"/>
+        <div class="overlay">
+            <p>Cute Cat</p>
+        </div>
+    </div>
+</body>
+</html>

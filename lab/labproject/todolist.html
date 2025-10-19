@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDOList</title>
+    <script src="scripttodolist.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(50, 34, 83);
+        }
+        .container{
+            margin-top: 100px;
+            border: 2px solid black;
+            padding: 10px 40px;
+            background-color: rgb(255, 175, 185);
+        }
+        #input_box{
+            margin: 0px 0px;
+            padding: 10px 40px;
+        }
+        #list_container{
+            list-style: none;
+            padding: 0;
+        }   
+        #list_container li{
+            padding: 12px 15px 12px 20px;
+            font-size: 17px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        #list_container li.checked {
+            color: #ff0000;
+            text-decoration: line-through;
+        }
+        #list_container li span {
+            color: #000000;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>TO-DO LIST <i class="fa-solid fa-plus"></i></h1>
+            <input type="text" id="input_box" placeholder="Add new todo">
+        </div>
+        <ul id="list_container"></ul>
+    </div>
+</body>
+</html>

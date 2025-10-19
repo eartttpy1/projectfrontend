@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(57, 64, 97);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            text-align: center;
+            color: aliceblue;
+            font-size: 5rem;
+        }
+        .faq-items{
+            width: 1000px;
+            height: 200px;
+            display: grid;
+            grid-template-rows: repeat(3,1fr);
+            column-gap: 50px;
+        }
+        .ques{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-family: sans-serif;
+            font-weight: 700;
+        }
+        .ques .arrow{
+            transition: transform 0.2s ease;
+        }
+        .ques:hover .arrow{
+            transform: rotate(180deg);
+        }
+        .ans{
+            max-height: 0;
+            color: rgb(57, 64, 97);
+            background-color: aliceblue;
+            text-wrap: wrap;
+            padding-left: 10px;
+            overflow: hidden;
+            transition: all 0.2s linear;
+        }
+        .ans.clicked{
+            color: black;
+            max-height: 150px;
+        }
+
+
+
+        
+    </style>
+    <script src="faq.js" defer></script>
+</head>
+<body>
+    <header><h1>FQA Section</h1></header>
+    <main class="faq-container">
+            <section class="faq-items">
+                <button class="ques">
+                    What is your return policy?
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="ans">
+                    <p>You can return any item within 30 days of purchase for a full refund.</p>
+                </div>
+            </section>
+            <section class="faq-items">
+                <button class="ques">
+                    Do you offer international shipping?
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="ans">
+                    <p>Yes, we ship to most countries worldwide. Shipping fees apply.</p>
+                </div>
+            </section>
+            <section class="faq-items">
+                <button class="ques">
+                    How can I track my order?
+                    <span class="arrow">&#9660;</span>
+                </button>
+                <div class="ans">
+                    <p>Once your order is shipped, we will send you a tracking number via email.</p>
+                </div>
+            </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: "Nunito", sans-serif;
+            font-weight: 400;
+            background-color: bisque;
+        }
+
+        form{
+            padding: 2rem;
+            border: 5px dashed rgb(0, 0, 0);
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+        p{
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        button{
+            margin: 0 140px;
+            color: aliceblue;
+            background: linear-gradient(to top, rgb(0, 0, 0),rgb(0, 0, 255, 0.5));
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        input{
+            position: relative;
+            border-radius: 20px;
+            text-align: left;
+            padding-left: 10px;
+            transition: all 0.2s linear;
+        }
+
+        input:focus{
+            border: 2px solid blue;
+            transform: scale(1.05);
+            transform: translateY(-1px);
+        }
+
+        .pwd{
+            display: inline-flex;
+            flex-direction: row;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Create an account</h1>
+    </header>
+    
+    <main>
+        <p>It's free and always will be.</p>
+        <form>
+            <input type="text" name ="firstname" placeholder="First name" required>
+            <input type="text" name ="lastname" placeholder="Surname" required><br><br>
+            <input type="email" name ="email" placeholder="Email address" required><br><br>
+            <input class='pwd' type="password" id ="pwd" placeholder="New password" required>
+            <input class='pwd' type="checkbox" onclick="pwd.type = this.checked ? 'text':'password'">
+            <p>Birthday</p>
+            <div>
+                <select name="day">
+                    <!---option[value="$"]{$}*31-->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select name="month">
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <select name="year">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div><br>
+            
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>   
+
+            <button type="submit">Sign up</button>
+        </form>
+    </main>
+</body>
+</html>

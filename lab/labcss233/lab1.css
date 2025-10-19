@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 1000px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+th.team, td:first-child {
+    text-align: left;
+}
+
+thead {
+    background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+    background-color: #92ffe9;
+}
+
+tr:nth-child(odd) {
+    background-color: #9294ff;
+}
+
+tr:hover {
+    background-color: #bbbbbb;
+}
+
+img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.check span {
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;   /* ระยะห่างซ้ายขวา */
+}
+
+/* หัวตาราง */
+th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+/* เส้นแบ่งแต่ละช่อง */
+td, th {
+    border-bottom: 1px solid #000000;
+}
+td.check, th.check {
+    min-width: 140px;   /* กำหนดความกว้างขั้นต่ำ */
+    text-align: center;
+}
+/* คอลัมน์ทีม */
+td.team, th.team {
+    text-align: left;
+    min-width: 200px;   /* กำหนดความกว้างขั้นต่ำ */
+}
+
+/* จัดให้โลโก้กับชื่อทีมอยู่ในบรรทัดเดียวและมีช่องไฟ */
+td.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;   /* ระยะห่างระหว่างโลโก้กับข้อความ */
+}
+
+/* กำหนดขนาดโลโก้ */
+td.team img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}

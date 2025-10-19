@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 100vh;
+            background-color: rgb(161, 183, 255);
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        img{
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: all 0.2s linear;
+        }
+        .player-image img:hover{
+            cursor: pointer;
+            box-shadow: 10px 10px 10px rgb(106, 106, 106);
+        }
+        .player-image{
+            padding-top: 100px;
+        }
+        .bot-image{
+            padding-bottom: 100px;
+        }
+        
+        .result{
+            font-size: 50px;
+            font-weight: 700;
+            display: block;
+            padding-top: 10px;
+            margin: 0;
+            text-align: center;
+        }
+        h1{
+            font-size: 50px;
+            color: rgb(43, 42, 77);
+            animation: pulse 2s ease-in;
+        }
+        @keyframes pulse {
+            0%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        h3{
+            background-color: rgb(65, 65, 126);
+            padding: 5px;
+            box-shadow: 2px 2px 10px rgb(121, 121, 121, 0.5);
+            border-radius: 20px;
+            text-align: center;
+            color: aliceblue;
+            margin: 30px 0px;
+        }
+        figure{
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+        }
+        
+        .btn-reset{
+            margin-top: 0px ;
+            font-size: 1.2rem;
+            color: rgb(0, 0, 0);
+            border: none;
+            background: linear-gradient(to top, rgb(255, 249, 179), rgb(176, 254, 255));
+            border-radius: 20px;
+            padding: 20px 50px;
+            transition: all 0.2s linear;
+        }
+        .btn-reset:hover{
+            background: linear-gradient(to top, rgb(190, 182, 86), rgb(65, 143, 145));
+            color: aliceblue;
+            transform: scale(1.05);
+        }
+        .bot-image .clicked{
+            transform: translateY(100px);
+        }
+        .player-image .clicked{
+            transform: translateY(-100px);
+
+        }
+
+    </style>
+    <script src="rps.js" defer></script>
+</head>
+<body>
+    <header><h1><i class="fa-solid fa-heart"></i>Rock Paper Scissors game<i class="fa-solid fa-heart"></i></h1></header>
+    <main>
+        <section class="game">
+            <p class="result"></p>
+            <div class="bot">
+                <h3>Bot</h3>
+                <figure class="bot-image">
+                    <img class="r" src="rock.png" alt="rock">
+                    <img class="p" src="paper.png" alt="paper">
+                    <img class="s" src="scissors.png" alt="scissors">
+                </figure>
+            </div>
+            <div class="player">
+                <figure class="player-image">
+                    <img class="r" src="rock.png" alt="rock">
+                    <img class="p" src="paper.png" alt="paper">
+                    <img class="s" src="scissors.png" alt="scissors">
+                </figure>
+                <h3>Player</h3>
+            </div>
+        </section>
+        <button class="btn-reset">Reset</button>
+    </main>
+</body>
+</html>

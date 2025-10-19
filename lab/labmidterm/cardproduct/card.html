@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            overflow: hidden;
+            height: 100vh;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: antiquewhite;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            display: inline-flex;
+            gap: 50px;
+    
+        }
+        img{
+            border-radius: 20px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .card{
+            position: relative;
+            border: none;
+            border-radius: 20px ;
+            padding: 100px 70px;
+            transition: all 0.3s ease-in;
+        }
+        .card:nth-child(1) {
+            background-color: rgb(255, 168, 223);
+        }
+        .card:nth-child(2) {
+            background-color: rgb(170, 235, 255); 
+        }
+        .card:nth-child(3) {
+            background-color: rgb(180, 255, 191);
+        }
+        button{
+            position: absolute;
+            opacity: 0;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: aliceblue;
+            padding: 10px 15px;
+            transition: opacity 0.3s ease-in;
+
+        }
+        .card:hover{
+            box-shadow: 5px 5px 10pป rgb(0,0,0,0.5);
+        }
+
+        .card:hover button{
+            opacity: 1;
+        }
+        
+    </style>
+    <script src="card.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7wTtU6HcSEk0jIc6XrD1He6XMoFIUgiYXTQ&s" alt="cake">
+            <h3>Cake</h3>
+            <p>149 Baht</p>
+            <button>Add cart</button>
+        </div>
+        <div class="card">
+            <img src="https://booboosbakery.com/wp-content/uploads/2025/03/single-serve-cookie-2.jpg" alt="cookie">
+            <h3>Cookie</h3>
+            <p>39 Baht</p>
+            <button>Add cart</button>
+        </div>
+        <div class="card">
+            <img src="https://image.makewebcdn.com/makeweb/m_1920x0/DFCAvdp6Z/DefaultData/%E0%B9%84%E0%B8%97%E0%B8%9F%E0%B8%B9%E0%B8%81%E0%B8%B8%E0%B9%82%E0%B8%A1%E0%B8%88%E0%B8%B4.jpg" alt="moji">
+            <h3>Moji</h3>
+            <p>59 Baht</p>
+            <button>Add cart</button>
+        </div>
+    </main>
+    
+</body>
+</html>
