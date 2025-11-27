@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container{
+    border: 50px solid black;
+    width: 200px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+}
+.box{
+    cursor: pointer;
+}
+.box:nth-child(1){
+    background-color: black;
+}
+.box:nth-child(2){
+    background-color: rgb(255, 255, 255);
+}
+.box:nth-child(3){
+    background-color: rgb(255, 255, 255);
+}
+.box:nth-child(4){
+    background-color: #000000;
+}
+.container.is-swapped .box:nth-child(1){
+    background-color: rgb(255, 255, 255);
+}
+.container.is-swapped .box:nth-child(2){
+    background-color: rgb(0, 0, 0);
+}
+.container.is-swapped .box:nth-child(3){
+    background-color: rgb(0, 0, 0);
+}
+.container.is-swapped .box:nth-child(4){
+    background-color: rgb(255, 255, 255);
+}

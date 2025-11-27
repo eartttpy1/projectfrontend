@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.dark{
+    background-color: black;
+    color: aliceblue;
+}
+
+.light{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.switch{
+    background-color: rgb(78, 160, 185);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    transition: transform 0.2s linear;
+}
+.switch:active{
+    transform: translateY(-1px);
+}
+
+.switch{
+    background-color: rgb(78, 160, 185);
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+
+}
+
+
